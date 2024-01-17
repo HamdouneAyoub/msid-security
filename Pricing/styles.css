@@ -1,0 +1,533 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+  color: #526066;
+}
+
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#logo{
+  height:   40px;;
+}
+#getanti{
+  position:absolute;
+     right: 0;
+  margin-top: 8px;
+  background-color: #e02f1f  ;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+}
+h2,
+h3 {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+/*
+ * -- Layout Styles --
+ */
+.l-content {
+  margin: 0 auto;
+}
+
+.l-box {
+  padding: 0.5em 2em;
+}
+
+/*
+ * -- MENU STYLES --
+ * Make the menu have a very faint box-shadow.
+ */
+.pure-menu {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pure-menu-link {
+  padding: 0.5em 0.7em;
+}
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ */
+
+.banner {
+  height: 1000px;
+  background: transparent
+    url(bg.jpg)
+    0 0 no-repeat fixed;
+   
+  text-align: center;
+  background-size:1500px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
+
+
+  width: 100%;
+  margin-bottom: 3em;
+  display: table;
+}
+
+.banner-head {
+  font-weight: bold;
+
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: white;
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 3em;
+  color: black;
+  font-weight: 800;
+  text-shadow: 0 1px 1px black;
+}
+
+/*
+ * -- PRICING TABLE WRAPPER --
+ * This element wraps up all the pricing table elements
+ */
+.pricing-tables,
+.information {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.pricing-tables {
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+/*
+ * -- PRICING TABLE  --
+ * Every pricing table has the .pricing-table class
+ */
+.pricing-table {
+  border: 1px solid #ddd;
+  margin: 0 0.5em 2em;
+  padding: 0 0 3em;
+}
+
+/*
+ * -- PRICING TABLE HEADER COLORS --
+ * Choose a different color based on the type of pricing table.
+ */
+.pricing-table-free .pricing-table-header {
+  background: rgb(56, 28, 118);
+}
+
+.pricing-table-biz .pricing-table-header {
+  background: rgb(130, 51, 255)  ;
+}
+
+/*
+ * -- PRICING TABLE HEADER --
+ * By default, a header is black/white, and has some styles for its <h2> name.
+ */
+.pricing-table-header {
+  background: rgb(9, 150, 220);
+  color: #fff;
+}
+.pricing-table-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/*
+ * -- PRICING TABLE PRICE --
+ * Styles for the price and the corresponding <span>per month</span>
+ */
+.pricing-table-price {
+  font-size: 4em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
+}
+.pricing-table-price span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
+
+/*
+ * -- PRICING TABLE LIST --
+ * Each pricing table has a <ul> which is denoted by the .pricing-table-list class
+ */
+.pricing-table-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/*
+ * -- PRICING TABLE LIST ELEMENTS --
+ * Styles for the individual list elements within each pricing table
+ */
+.pricing-table-list li {
+  padding: 0.8em 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/*
+ * -- PRICING TABLE BUTTON --
+ * Styles for the "Choose" button at the bottom of a pricing table.
+ * This inherits from Pure Button.
+ */
+.button-choose {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  border-radius: 2em;
+  font-weight: bold;
+  position: relative;
+  bottom: -1.5em;
+}
+
+.information-head {
+  color: black;
+  font-weight: 500;
+}
+
+
+
+/*
+ * -- TABLET MEDIA QUERIES --
+ * On tablets, we want to slightly adjust the size of the banner
+ * text and add some vertical space between the various pricing tables
+ */
+@media (min-width: 767px) {
+  .banner-head {
+    font-size: 4em;
+  }
+  .pricing-table {
+    margin-bottom: 0;
+  }
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media (min-width: 480px) {
+  .banner {
+    height: 500px;
+  }
+  .banner-head {
+    font-size: 3em;
+  }
+
+  
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 100;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #e02f1f;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 9999px;
+}
+
+#myBtn:hover {
+  background-color: #3e5fff;
+}
+.icon-img-footer {
+  width: 45px;
+  
+  
+}
+.content-text-footer {
+  font-size: 0.8em;
+  font-weight: 600;
+  
+ 
+  color: #ffffff;
+}
+.content-text-footer {
+  font-size: 0.8em;
+  font-weight: 600;
+  
+ 
+  color: #ffffff;
+}
+.footer {
+  background: #454545e8;
+ 
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.testimonials {
+	margin-top: 0px;
+
+  }
+  
+  section.testimonials .section-heading {
+	padding-top: 30px;
+  }
+  
+  .testimonials .item {
+	border-radius: 15px;
+	padding: 50px 320px 50px 50px;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+	margin: 15px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	padding-top: 35px;
+  }
+  
+  .testimonials .item i {
+	width: 70px;
+	height: 70px;
+	background-color: #3e5fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 70px;
+	color: #fff;
+	font-size: 44px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+  }
+  
+  .testimonials .item p {
+	font-size: 16px;
+	font-style: italic;
+  }
+  
+  .testimonials .item h4 {
+	margin-top: 30px;
+	font-size: 22px;
+	font-weight: 600;
+	position: relative;
+  }
+  
+  .testimonials .item span {
+	margin-top: 5px;
+	display: block;
+	font-size: 15px;
+	font-weight: 600;
+	color: #3e5fff;
+  }
+  
+  .testimonials .item img {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 300px;
+	border-radius: 5px;
+  }
+  
+  .testimonials .owl-dots {
+	text-align: center;
+	margin-top: 30px;
+  }
+  
+  .testimonials .owl-dots .owl-dot {
+	width: 10px;
+	height: 10px;
+	background-color: #ffa88c;
+	border-radius: 50%;
+	margin: 0px 4px;
+  }
+  
+  .testimonials .owl-dots .active {
+	background-color: #ff511a;
+  }
+  .testimonials .item i {
+    margin-bottom: 60px;
+  }
+  .testimonials .item img {
+    max-width: 100px;
+    right: 50px;
+    top: 35px;
+    transform: translateY(0);
+  }
+  .testimonials .item {
+    padding: 50px;
+  }
+  .testimonials .item img {
+    max-width: 200px;
+    right: 50px;
+  }  
+.section-heading {
+    position: relative;
+    z-index: 2;
+    margin-top: 0px;
+    text-align: center;}
+.section-heading h4 {
+    margin-top: 10px;
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #3e5fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+  
+  font-family: "Open Sans";
+  width: 1170px;
+  margin: 0 auto;
+}
+.price-table {
+
+  width: 100%;
+  border-collapse: collapse;
+  border: 0 none;
+}
+.price-table tr:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+.price-table tr td {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  
+  font-size: 14px;
+}
+.price-table tr td:first-child {
+  border-left: 0 none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.price-table tr td:not(:first-child) {
+  text-align: center;
+  padding: 10px;
+}
+.price-table tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+.price-table tr:hover {
+  background-color: #EEEEEE;
+}
+.price-table .fa-check {
+  color: #3e5fff;
+}
+.price-table .fa-times {
+  color: #D8D6E3;
+}
+
+/* Highlighted column */
+.price-table tr:nth-child(2n) td:nth-child(3) {
+  background-color: rgba(216, 214, 227, 0.25);
+}
+.price-table tr td:nth-child(3) {
+  background-color: rgba(216, 214, 227, 0.15);
+  padding: 8px 48px;
+}
+.price-table tr td:nth-child(3) .fa-check,
+.price-table tr:nth-child(2n) td:nth-child(3) .fa-check {
+  /* color: #ffffff; */
+}
+/**/
+
+.price-table tr.price-table-head td {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+}
+.price-table tr.price-table-head {
+  
+  background-color: #3e5fff;
+  color: #FFFFFF;
+}
+.price-table td.price {
+  color: #f43f54;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+.price-table td.price a {
+  background-color: #e02f1f;
+  color: #FFFFFF;
+  padding: 12px 32px;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 64px;
+}
+.price-table td.price-table-popular {
+  font-family: "Montserrat";
+  border-top: 3px solid #3e5fff;
+  color: #3e5fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 12px 48px;
+  font-weight: 700;
+}
+.price-table .price-blank {
+  background-color: #fafafa;
+  border: 0 none;
+}
+
+.price-table svg {
+  width: 90px;
+  fill: #3e5fff;
+}
+
+
+div.main{
+  width: 100%;
+}
+
+
