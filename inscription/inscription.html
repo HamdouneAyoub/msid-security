@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding signup and signin form - BYTEWEBSTER</title>
+  <link rel="stylesheet" href="./inscription.css">
+
+</head>
+<body>
+<div class="container">
+      <div class="forms-container">
+        <div class="form-control signup-form">
+          <form action="#">
+            <h2>S'inscrire</h2>
+            <input type="text" placeholder="Username" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Confirm password" required />
+            <button>S'inscrire</button>
+          </form>
+          <span>ou S'inscrire avec</span>
+          <div class="socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+        <div class="form-control signin-form">
+          <form action="#">
+            <h2>Se connecter</h2>
+            <input type="text" placeholder="Username" required />
+            <input type="password" placeholder="Password" required />
+            <button>Se connecter</button>
+          </form>
+          <span>ou Se connecter avec</span>
+          <div class="socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+      </div>
+      <div class="intros-container">
+        <div class="intro-control signin-intro">
+          <div class="intro-control__inner">
+            <h2>Content de vous revoir!</h2>
+            <p>
+            Content de vous revoir! Nous sommes si heureux de vous avoir ici.
+            C'est génial de vous revoir.
+            Nous espérons que vous avez passé un moment agréable et en toute sécurité.
+
+            </p>
+            <button id="signup-btn">Pas de compte? S'inscrire</button>
+          </div>
+        </div>
+        <div class="intro-control signup-intro">
+          <div class="intro-control__inner">
+            <h2>Venez nous rejoindre!</h2>
+            <p>
+              Nous sommes ravis de vous accueillir ici.
+              Si ce n'est pas déjà fait, créez un compte pour accéder à des offres, des récompenses et des réductions exclusives.
+            </p>
+            <button id="signin-btn">Vous avez déjà un compte? Se connecter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script  src="./script.js"></script>
+</body>
+</html>
